@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/0e767e0926.js" crossorigin="anonymous"></script>
+    <title>Hello, world!</title>
+    <style>
+       .head{
+           display:flex;
+        align-content:space-around;
+        background: black;
+        color: blanchedalmond;
+        padding: 0.5em;
+           
+       }
+       .live{
+        text-align:center;  
+        width: 25%;
+        animation: animatelive 1.5s infinite;
+       }
+       .safe{
+           
+           text-align: right;
+           width: 65%;
+       }
+       .fas{
+           font-size: 10px;
+           /* margin-bottom: 1em; */
+           box-shadow: 0px 0px 5px 3px rgba(240, 3, 3, 0.644);
+           
+       }
+       .boxes{
+           display: flex;
+          justify-content: space-around;
+           flex-wrap: wrap;
+      
+           
+       }
+       .box{
+           border-radius: 20px;
+           padding:1em;
+           height:100px;
+           width:40%;
+           box-shadow: 0px 0px 5px 3px rgba(32, 32, 32, 0.349);
+           background: black;
+           margin-bottom: 1em;
+           
+       }
+       #state{
+           width:70%;
+           margin-left: auto;
+           margin-right: auto;
+           color: rgb(252, 248, 239);
+           border-radius: 1em;
+          
+           background: rgba(8, 8, 8, 0.568);
+       }
+       body{
+           background: rgba(243, 243, 243, 0.76);
+       }
+       @media(max-width:410px)
+       {
+        .box h4,.box h5{
+            font-size: 1em;
+        }
+        .safe h3{
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+       }
+      
+       @keyframes animatelive {
+           
+           0%{
+               transform: scale(0);
+           }
+           50%{
+               transform: scale(1);
+           }
+           100%{
+               transform: scale(0);
+           }
+       }
+      select#state{
+          outline: none;
+      }
+      .form-select:focus {
+ border:none;
+    outline: 0;
+    box-shadow: 0 0 5px 3px rgba(29, 28, 28, 0.418);
+}
+    </style>
+  </head>
+  <body>
+      <header>
+          <div class="head">
+              <div class="live fs-5"><i class="fas fa-circle text-danger "></i> Live</div>
+              <div class="safe "><h3>Stay Home-Stay Safe</h3></div>
+            </div>
+      </header>
+<div class="container">
+      <div class="state my-3 text-center">
+          <h2>Select your state</h2>
+           
+        <select class="form-select  " id="state" aria-label="Default select example">
+            <option selected><b>State</b></option>
+            
+          </select>
+        
+      </div>
+    </div>
+      <div class="container mt-5">
+          <div class="boxes">
+              <div class="Active_Cases box text-warning text-center" id="Active_cases" >
+                  <h4>
+                    Active Cases
+                  </h4>
+                  <h5>_ _</h5>
+              </div>
+              <div class="Recovered box text-success text-center" id="recovered">
+                <h4>
+                    Recovered
+                  </h4>
+                  <h5>_ _</h5>
+              </div>
+              <div class="Total_deaths box text-danger text-center" id="Total_deaths">
+                <h4>
+                   Total deaths
+                  </h4>
+                  <h5>_ _</h5>
+              </div>
+              <div class="Total_cases box text-light text-center" id="Total_cases">
+                <h4>
+                    Total cases
+                  </h4>
+                  <h5>_ _</h5>
+              </div>
+          </div>
+      </div>
+
+
+
+       
+    
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"></script>
+    
+  
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+      integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+      integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+      crossorigin="anonymous"></script>
+
+  </body>
+  <script>
+      let states=document.getElementById("state")
+      let Total_cases=document.getElementById("Total_cases")
+      let Total_deaths=document.getElementById("Total_deaths")
+      let Active_cases=document.getElementById("Active_cases")
+      let recovered=document.getElementById("recovered")
+            
+
+    
+    fetch("https://covid-india-cases.herokuapp.com/states/", {
+headers:{
+    'Accept': 'application/json',
+    'X-Requested-With': 'XMLHttpRequest', //Necessary to work with request.is_ajax()
+},
+})
+.then(response => {
+return response.json() //Convert response to JSON
+})
+.then(data => {
+    
+    console.log(data)
+    var statehtml=`<option selected><b>State</b></option>`
+    for (i in data){
+        console.log(data[i].state)
+        statehtml+=`<option >${data[i].state}</option>`
+        states.innerHTML=statehtml
+    }
+    if (states.value== "State"){
+        
+    }
+    states.addEventListener("change",result)
+function result(){
+    console.log(states.value)
+
+    for (i in data){
+        if (states.value== data[i].state){
+            Active_cases.innerHTML=`
+                  <h4>
+                    Active Cases
+                  </h4>
+                  <h5>${data[i].active}</h5>`
+            
+               recovered.innerHTML=`
+                  <h4>
+                    Recovered
+                  </h4>
+                  <h5>${data[i].cured}</h5>`
+
+                  Total_deaths.innerHTML=`
+                  <h4>
+                    Recovered
+                  </h4>
+                  <h5>${data[i].deaths}</h5>`
+                  
+                  Total_cases.innerHTML=`
+                  <h4>
+                    Recovered
+                  </h4>
+                  <h5>${data[i].noOfCases}</h5>`
+        }
+    }
+
+}
+    
+
+
+})
+
+</script>
+</html>
